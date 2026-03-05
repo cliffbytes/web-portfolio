@@ -49,7 +49,7 @@ export default function Header() {
             </div>
 
             <div className="flex items-center gap-2">
-              {/* <ThemeToggle /> */}
+              <ThemeToggle />
 
               <Button
                 variant="ghost"

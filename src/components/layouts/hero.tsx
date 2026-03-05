@@ -27,16 +27,16 @@ export default function Hero() {
                   height={145}
                   className="rounded-full"
                 />
-                <span className="absolute bottom-0.5 right-5 w-3.5 h-3.5 bg-green-500 border-2 border-white rounded-full" />
+                <span className="absolute bottom-0.5 right-5 w-3.5 h-3.5 bg-green-500 border-2 border-background rounded-full" />
               </div>
               <div className="flex flex-col gap-2 sm:gap-3 items-center text-center xs:items-start">
                 <h1>John Doe</h1>
-                <h5 className="text-violet font-normal">
+                <h5 className="text-muted-foreground font-normal">
                   Full-Stack Software Developer
                 </h5>
                 <div className="flex items-center gap-2">
                   <span>🇧🇪</span>
-                  <p className="text-primary">Brussels, BE</p>
+                  <p className="text-foreground">Brussels, BE</p>
                 </div>
               </div>
               <div className="flex flex-col md:flex-row items-center gap-4">
