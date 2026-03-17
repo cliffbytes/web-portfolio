@@ -15,9 +15,8 @@ export default function AboutMe() {
               </p>
 
               <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground">
-                Hey there. Software developer based in Brussels, currently vibe
-                coding complex applications and occasionally losing my mind
-                refactoring them.
+                Hey there. Currently trying to vibe code some complex
+                applications and occasionally losing my mind refactoring them.
               </h2>
 
               <p className="text-muted-foreground"></p>

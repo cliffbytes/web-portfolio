@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "@/styles/globals.css";
+import { Inter } from "next/font/google";
+import type { Metadata } from "next";
 
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import Footer from "@/components/layouts/footer";
@@ -23,11 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={(inter.className, "bg-black")}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
           disableTransitionOnChange
         >
           <Header />

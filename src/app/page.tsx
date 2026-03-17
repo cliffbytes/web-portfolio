@@ -3,7 +3,7 @@ import Education from "@/components/layouts/education";
 import Experience from "@/components/layouts/experience";
 import Hero from "@/components/layouts/hero";
 import Projects from "@/components/layouts/projects";
-import SpotifyMusic from "@/components/layouts/spotify-music";
+import SpotifyMusics from "@/components/layouts/spotify-musics";
 import SpotifyPlaylist from "@/components/layouts/spotify-playlist";
 import TechStack from "@/components/layouts/tech-stack";
 // import Divider from "@/components/ui/divider";
@@ -23,9 +23,9 @@ export default function HomePage() {
       {/* <Divider /> */}
       <Projects />
       {/* <Divider /> */}
-      {/* <SpotifyMusic /> */}
+      {/* <SpotifyMusics /> */}
       {/* <Divider /> */}
-      <SpotifyPlaylist />
+      {/* <SpotifyPlaylist /> */}
       {/* <Divider /> */}
     </main>
   );
