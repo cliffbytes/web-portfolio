@@ -3,8 +3,8 @@ import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import Footer from "@/components/layouts/footer";
 import Header from "@/components/layouts/header";
+import Footer from "@/components/layouts/footer";
 
 const inter = Inter({
   variable: "--font-inter-sans",

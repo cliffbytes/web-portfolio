@@ -60,7 +60,6 @@ const techGroups: TechGroup[] = [
       { src: "/images/icons/openai-icon.svg", alt: "OpenAI", invert: true },
       { src: "/images/icons/perplexity-icon.svg", alt: "Perplexity" },
       { src: "/images/icons/mistral-icon.svg", alt: "Mistral" },
-      { src: "/images/icons/spark-icon.svg", alt: "Spark" },
     ],
   },
   {
