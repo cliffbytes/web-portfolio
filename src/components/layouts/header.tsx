@@ -11,7 +11,10 @@ type MenuItem = {
   href: string;
 };
 
-const menuItems: MenuItem[] = [];
+const menuItems: MenuItem[] = [
+  { name: "Blog", href: "/blog" },
+  { name: "F.A.Q.", href: "/faq" },
+];
 
 export default function Header() {
   const [menuState, setMenuState] = React.useState(false);
