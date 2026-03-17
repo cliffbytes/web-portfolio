@@ -88,7 +88,7 @@ export default function VoxelBanner({ src, className }: Props) {
 
         // Limit rotation range so the mask stays roughly facing the user
         model.rotation.y = target.x * 0.7;
-        model.rotation.x = -target.y * (25 * Math.PI / 180);
+        model.rotation.x = -target.y * (30 * Math.PI / 180);
       }
 
       renderer.render(scene, camera);
