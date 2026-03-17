@@ -11,36 +11,16 @@ type Project = {
   stack?: string[];
 };
 
-export default function Projects() {
-  const recentProjects: Project[] = [
-    {
-      title: "Cairos EU - Website",
-      description: "Website redesign for a software development company.",
-      websiteUrl: "https://cairos-eu-com.vercel.app/",
-    },
-    {
-      title: "Siege Social BE - Website",
-      description: "Website redesign for a business domiciliation company.",
-      websiteUrl: "https://siegesocial-be.vercel.app/",
-    },
-  ];
+export default async function Projects() {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000"}/api/page-data`,
+    { cache: "no-store" },
+  );
+  const {
+    recentProjects,
+    olderProjects,
+  }: { recentProjects: Project[]; olderProjects: Project[] } = await res.json();
 
-  const olderProjects: Project[] = [
-    {
-      imageUrl: "",
-      title: "Counter-Strike:Source - Server",
-      description:
-        "Setting up a complete counter-strike:source dedicated server using steamcmd, hosting and community website.",
-      websiteUrl: "https://cstrike.42web.io/",
-    },
-    {
-      imageUrl: "",
-      title: "World Of Warcraft - Server",
-      description:
-        "Setting up a complete world of warcraft private server using azerothcore-wotlk, hosting and community website.",
-      websiteUrl: "https://warlegend.gamer.gd/",
-    },
-  ];
   return (
     <section>
       <div className="container">
@@ -52,7 +32,7 @@ export default function Projects() {
 
             <div className="grid grid-cols-1 gap-10">
               {recentProjects?.map((project, idx) => (
-                <Card key={idx} className="flex flex-col gap-5 p-5">
+                <Card key={idx} className="flex flex-col gap-5 p-5 bg-black">
                   <h5 className="font-semibold">{project.title}</h5>
                   <p className="text-muted-foreground">{project.description}</p>
                   <div className="flex gap-4">
