@@ -1,12 +1,17 @@
 import Image from "next/image";
-import VoxelBanner from "./voxel-banner";
+// import VoxelBanner from "./voxel-banner";
+import VoxelBannerRotate from "./voxel-banner-rotate";
 
 export default function Hero() {
   return (
     <section className="pt-32">
       <div className="container">
         <div className="">
-          <VoxelBanner
+          {/* <VoxelBanner
+            src="/images/about-me/mask.glb"
+            className="w-full h-72"
+          /> */}
+          <VoxelBannerRotate
             src="/images/about-me/mask.glb"
             className="w-full h-72"
           />
