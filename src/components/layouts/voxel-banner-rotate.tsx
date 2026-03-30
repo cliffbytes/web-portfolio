@@ -16,6 +16,17 @@ export default function VoxelBannerRotate({ src, className }: Props) {
     const mount = mountRef.current;
     if (!mount) return;
 
+    // Check WebGL support
+    const canvas = document.createElement("canvas");
+    const gl =
+      canvas.getContext("webgl2") ||
+      canvas.getContext("webgl") ||
+      canvas.getContext("experimental-webgl");
+    if (!gl) {
+      console.warn("WebGL not supported, skipping 3D banner");
+      return;
+    }
+
     const width = mount.clientWidth;
     const height = mount.clientHeight + 150;
 
