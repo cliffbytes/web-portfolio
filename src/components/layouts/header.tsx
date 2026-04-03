@@ -14,6 +14,7 @@ type MenuItem = {
 const menuItems: MenuItem[] = [
   { name: "Blog", href: "/blog" },
   { name: "F.A.Q.", href: "/faq" },
+  { name: "Affiliate", href: "/affiliate" },
 ];
 
 export default function Header() {

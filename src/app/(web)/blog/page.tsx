@@ -21,31 +21,31 @@ export default function BlogPage() {
         </p>
       </div>
 
-      <div className="mt-14 grid gap-4 md:grid-cols-2">
+      <div className="mt-14 grid gap-4 grid-cols-1">
         {posts.map((post) => (
-            <Link key={post.slug} href={`/blog/${post.slug}`}>
-              <Card className="grid grid-rows-[auto_1fr_auto] overflow-hidden h-full transition-opacity hover:opacity-70">
-                <CardHeader className="pb-2">
-                  <h3 className="text-base">{post.title}</h3>
-                  <p className="text-xs font-semibold text-foreground/80">
-                    {post.date}
-                  </p>
-                </CardHeader>
-                <CardContent className="pb-2">
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    {post.description}
-                  </p>
-                </CardContent>
-                <CardFooter>
-                  <span className="flex items-center text-sm text-muted-foreground">
-                    Read more
-                    <ArrowRight className="ml-1 size-3" />
-                  </span>
-                </CardFooter>
-              </Card>
-            </Link>
-          ))}
-        </div>
+          <Link key={post.slug} href={`/blog/${post.slug}`}>
+            <Card className="grid grid-rows-[auto_1fr_auto] overflow-hidden h-full transition-opacity hover:opacity-70">
+              <CardHeader className="pb-2">
+                <h3 className="text-base">{post.title}</h3>
+                <p className="text-xs font-semibold text-foreground/80">
+                  {post.date}
+                </p>
+              </CardHeader>
+              <CardContent className="pb-2">
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {post.description}
+                </p>
+              </CardContent>
+              <CardFooter>
+                <span className="flex items-center text-sm text-muted-foreground">
+                  Read more
+                  <ArrowRight className="ml-1 size-3" />
+                </span>
+              </CardFooter>
+            </Card>
+          </Link>
+        ))}
+      </div>
     </section>
   );
 }
